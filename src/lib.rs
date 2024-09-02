@@ -44,6 +44,9 @@
 #![allow(unsafe_code)]
 #![deny(missing_docs)]
 
+#[cfg(any(test, feature = "use_std"))]
+extern crate std;
+
 use core::cell::UnsafeCell;
 use core::cmp;
 use core::fmt;
